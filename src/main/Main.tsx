@@ -3,13 +3,13 @@ import { FC } from "react"
 import { IntroductionSection, IntroductionTitle, IntroductionText } from "./style";
 import { data } from '../data';
 
-type SelectOption = {
+export interface SelectOption  {
     id: number
     link: string
 }
 
-type SelectProps = {
-    carotte: SelectOption[];
+export interface SelectProps {
+    data?: SelectOption[];
 }
 
 const Main: FC<SelectProps> = () => {
