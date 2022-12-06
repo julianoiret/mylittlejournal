@@ -1,25 +1,39 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import GlobalStyle from './globalStyles';
+import Footer from './footer/Footer';
+import Header from './header/Header';
+import Main from './main/Main';
+import { data } from './data';
+
+// const options = [
+//   {
+//       id: 1,
+//       link: 'https://i.postimg.cc/ydN7vdg2/1.jpg',
+//   },
+//   {
+//       id: 2,
+//       link: 'https://i.postimg.cc/63KMX2L1/2.jpg',
+//   },
+//   {
+//       id: 3,
+//       link: 'https://i.postimg.cc/Ssmf50kB/5.jpg',
+//   },
+//   {
+//       id: 4,
+//       link: 'https://i.postimg.cc/hjM1RCGf/6.jpg',
+//   },
+// ]
+
+const options = data;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <GlobalStyle />
+    <Header />
+    <Main carotte={options} />
+    <Footer />
+    </>
   );
 }
 
