@@ -1,30 +1,21 @@
-import { FC, useEffect, useState } from "react"
-import { PhotoSection, PhotoGallery, ArrowIcons, Icon} from "./style";
-import { CgArrowLongLeft, CgArrowLongRight } from 'react-icons/cg';
-
-// export interface detailsPhoto  {
-//     id: number,
-//     link: string,
-//     description: string,
-// }
+import { FC } from "react"
+import { PhotoGallery} from "./style";
 
 export interface Props {
-    // photoGallery: detailsPhoto[];
     id: number,
     link: string,
     description: string,
+    photoPopup: any,
+    openToggle: any,
 }
 
-const Carousel : FC<Props> = ({id, link, description}) => {
-
-    const [isZoom, setZoom] = useState(false);
-
-    const togglePhoto = () => {
-        setZoom(!isZoom);
-      };
+const Carousel : FC<Props> = ({id, link, description, photoPopup, openToggle}) => {
 
     return (
-        <PhotoGallery onClick={togglePhoto} className={isZoom ? 'zoom' : ''} key={id} src={link} alt={description}></PhotoGallery>
+        <PhotoGallery key={id} src={link} alt={description} onClick={() => {
+            openToggle();
+            photoPopup(id);
+        }}></PhotoGallery>
     )
 };
 
