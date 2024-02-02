@@ -99,5 +99,5 @@ export const data = [
         link: 'https://i.postimg.cc/DzNg4qPM/IMG-4140.jpg',
         description: 'Journaling',
     },
-  ];
+  ]
   

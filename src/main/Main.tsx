@@ -64,7 +64,7 @@ const openToggle = () => {
             <PhotoSection>
             {imagesToDisplay.map((photo: any) => {
                 return <Carousel key={photo.id}{...photo} photoPopup={photoPopup} openToggle={openToggle}></Carousel>
-            })};
+            })}
             </PhotoSection>
             {isZoom && (
             <Popup openToggle={openToggle} photoToggle={photoToggle}></Popup>)}
