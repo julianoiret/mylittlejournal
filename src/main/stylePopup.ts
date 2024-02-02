@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { CgArrowLongLeft, CgArrowLongRight } from 'react-icons/cg';
 
 export const Overlay = styled.div`
 
@@ -12,7 +11,6 @@ export const Overlay = styled.div`
     display: none;
     z-index: 3;
   
-
     display: grid;
     align-items: center;
     justify-items: center;
@@ -20,8 +18,8 @@ export const Overlay = styled.div`
   
   export const OverlayInner = styled.div`
     background: white;
-    width: 700px;
     padding: 20px;
+    width: 700px;
     position: relative;
     opacity: 1;
   `

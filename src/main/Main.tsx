@@ -1,10 +1,11 @@
 /* eslint-disable jsx-a11y/alt-text */
 import { FC, useEffect, useState } from "react"
-import { IntroductionSection, IntroductionTitle, IntroductionText, Test, Icon, ArrowIcons, PhotoSection } from "./style";
+import { IntroductionSection, TextWrapper, IntroductionTitle, IntroductionText, Test, Icon, ArrowIcons, PhotoSection, FingerImg } from "./style";
 import { CgArrowLongLeft, CgArrowLongRight } from 'react-icons/cg';
+import { IoIosArrowDropright } from "react-icons/io";
+import { IoIosArrowDropleft } from "react-icons/io";
 import Carousel from './Carousel';
 import Popup from "./Popup";
-import { log } from "console";
 
 export interface detailsPhoto  {
     id: number,
@@ -59,8 +60,10 @@ const openToggle = () => {
     return (
         <>
         <IntroductionSection>
-            <IntroductionTitle>My Little Journal - personal journal</IntroductionTitle>
-            <IntroductionText>Hi, I'm Julia, French-Australian based in Sydney. I started my first journal when I was 7, then came across scrapbooking in late 2000's and finally begin journaling/collage in 2020. I'm writing about science, history, culture, art, etc.</IntroductionText>
+          <TextWrapper>
+            <IntroductionTitle>Hi, I'm Julia. I create, I write.</IntroductionTitle>
+            <IntroductionText>French-Australian journaler based in Sydney. Passionate about art, collage and writing, I started my first journal when I was 7. I love creating vintage-vibe themes, in particularly with plants and animals. I find journaling relaxing and think that it's a form of art.</IntroductionText>
+          </TextWrapper>
             <PhotoSection>
             {imagesToDisplay.map((photo: any) => {
                 return <Carousel key={photo.id}{...photo} photoPopup={photoPopup} openToggle={openToggle}></Carousel>
@@ -70,10 +73,12 @@ const openToggle = () => {
             <Popup openToggle={openToggle} photoToggle={photoToggle}></Popup>)}
         <ArrowIcons>
          <Icon>
-             <CgArrowLongLeft onClick={() => handleSubstractIndex()} />
+         <FingerImg onClick={() => handleAddIndex()} src={require('../asset/right-arrow.png')}/>
          </Icon>
          <Icon>
-             <CgArrowLongRight onClick={() => handleAddIndex()} />
+         <FingerImg onClick={() => handleAddIndex()} src={require('../asset/left-arrow.png')}/>
+      
+             {/* <FingerImg onClick={() => handleAddIndex()} /> */}
          </Icon>
      </ArrowIcons>
         </IntroductionSection>

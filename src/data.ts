@@ -17,6 +17,7 @@ export const data = [
     {
         id: 4,
         link: 'https://i.postimg.cc/hjM1RCGf/6.jpg',
+        title: '',
         description: 'Journaling',
     },
     {
