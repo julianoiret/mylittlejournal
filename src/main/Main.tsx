@@ -1,15 +1,13 @@
 /* eslint-disable jsx-a11y/alt-text */
 import { FC, useEffect, useState } from "react"
-import { IntroductionSection, TextWrapper, IntroductionTitle, IntroductionText, Test, Icon, ArrowIcons, PhotoSection, FingerImg } from "./style";
-import { CgArrowLongLeft, CgArrowLongRight } from 'react-icons/cg';
-import { IoIosArrowDropright } from "react-icons/io";
-import { IoIosArrowDropleft } from "react-icons/io";
+import { PrimaryWrapper, SecondaryWrapper, ThirdWrapper, LeafImg, IntroductionTitle, IntroductionText, PhotoSection, CarouselNavWrapper, CarouselBtn, FingerImg } from "./style";
 import Carousel from './Carousel';
 import Popup from "./Popup";
 
 export interface detailsPhoto  {
     id: number,
     link: string,
+    title: string,
     description: string,
 }
 
@@ -27,7 +25,7 @@ const Main: FC<Props> = ({photoGallery}) => {
 
   const chunkSize = 8;
 
-  // Open component
+  // Open image
 const openToggle = () => {
     setZoom(!isZoom);
   };
@@ -46,42 +44,60 @@ const openToggle = () => {
         chunkSize * index
       )
     );
-  }, [allImages, index]);
+  }, [index, allImages]);
 
   // Go previous index block
   const handleSubstractIndex = () => {
-    setIndex((prevIndex) => prevIndex - 1);
+    setIndex((prevIndex) => {
+      let index = prevIndex - 1;
+      if (index < 1) {
+        // I used math ceil to round up the index and I had to divide by the chunkSize which is 8
+        index = Math.ceil(allImages.length / chunkSize);
+      }
+      return index
+    });
   };
+
   // Go next index block
   const handleAddIndex = () => {
-    setIndex((prevIndex) => prevIndex + 1);
+    setIndex((prevIndex) => {
+      let index = prevIndex + 1;
+      // I used math ceil to round up the index 
+      if (index > Math.ceil(allImages.length / chunkSize)) {
+        index = 1;
+      }
+      return index
+      });
   };
 
     return (
         <>
-        <IntroductionSection>
-          <TextWrapper>
+        <PrimaryWrapper>
+          <SecondaryWrapper>
+          <LeafImg src={require('../asset/leaf.png')}></LeafImg>
+          <ThirdWrapper>
             <IntroductionTitle>Hi, I'm Julia. I create, I write.</IntroductionTitle>
             <IntroductionText>French-Australian journaler based in Sydney. Passionate about art, collage and writing, I started my first journal when I was 7. I love creating vintage-vibe themes, in particularly with plants and animals. I find journaling relaxing and think that it's a form of art.</IntroductionText>
-          </TextWrapper>
-            <PhotoSection>
-            {imagesToDisplay.map((photo: any) => {
-                return <Carousel key={photo.id}{...photo} photoPopup={photoPopup} openToggle={openToggle}></Carousel>
+            </ThirdWrapper>
+            <LeafImg src={require('../asset/leaf.png')}></LeafImg>
+          </SecondaryWrapper>
+        </PrimaryWrapper>
+        <PhotoSection>
+          {imagesToDisplay.map((photo: any) => {
+            return <Carousel key={photo.id}{...photo} photoPopup={photoPopup} openToggle={openToggle}></Carousel>
             })}
-            </PhotoSection>
-            {isZoom && (
-            <Popup openToggle={openToggle} photoToggle={photoToggle}></Popup>)}
-        <ArrowIcons>
-         <Icon>
-         <FingerImg onClick={() => handleAddIndex()} src={require('../asset/right-arrow.png')}/>
-         </Icon>
-         <Icon>
-         <FingerImg onClick={() => handleAddIndex()} src={require('../asset/left-arrow.png')}/>
-      
-             {/* <FingerImg onClick={() => handleAddIndex()} /> */}
-         </Icon>
-     </ArrowIcons>
-        </IntroductionSection>
+        </PhotoSection>
+        {isZoom && (
+        <Popup openToggle={openToggle} photoToggle={photoToggle}></Popup>)}
+        <CarouselNavWrapper>
+          <CarouselBtn>
+            <FingerImg onClick={() => handleSubstractIndex()} src={require('../asset/right-arrow.png')}/>
+          </CarouselBtn>
+          <CarouselBtn>
+            <FingerImg onClick={() => handleAddIndex()} src={require('../asset/left-arrow.png')}/>
+          </CarouselBtn>
+        </CarouselNavWrapper>
+
         </>
     )
 };

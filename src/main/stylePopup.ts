@@ -10,10 +10,13 @@ export const Overlay = styled.div`
     left: 0;
     display: none;
     z-index: 3;
-  
     display: grid;
     align-items: center;
     justify-items: center;
+
+    &:hover {
+
+    }
   `
   
   export const OverlayInner = styled.div`
@@ -34,9 +37,9 @@ export const Overlay = styled.div`
   border: 0;
   text-transform: uppercase;
   letter-spacing: 2px;
-  &:hover {
-    color: grey;
-  }
+  // &:hover {
+  //   color: grey;
+  // }
   `
   
   export const ProjectImg = styled.img`

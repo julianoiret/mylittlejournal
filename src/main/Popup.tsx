@@ -3,12 +3,12 @@ import { Overlay, OverlayInner, ProjectImg, OverlayClose } from "./stylePopup";
 const Popup = ({openToggle, photoToggle}: any) => {
 
     return (
-        <Overlay>
+        <Overlay onClick={openToggle}>
             <OverlayInner>
                 <OverlayClose onClick={openToggle}>
                     X
                 </OverlayClose>
-                <ProjectImg src={photoToggle.link}></ProjectImg>
+                <ProjectImg onClick={openToggle} src={photoToggle.link}></ProjectImg>
             </OverlayInner>
         </Overlay>
     
