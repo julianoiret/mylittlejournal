@@ -36,6 +36,23 @@ letter-spacing: 3px;
 export const IntroductionText = styled.p`
 `;
 
+export const PhotoWrapper = styled.div`
+width: 95%;
+position: relative;
+padding: 8px;
+margin: 0 auto;
+
+@media (min-width: 768px) {
+  /* Apply styles for screens wider than 768px */
+  max-width: 768px;
+}
+
+@media (min-width: 1024px) {
+  /* Apply styles for screens wider than 1024px */
+  max-width: 1024px;
+}
+`;
+
 export const PhotoSection = styled.div`
 display: grid;
 grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -45,20 +62,34 @@ width: 90%;
 margin: 0 auto;
 `;
 
+export const PhotoTitle = styled.p`
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+opacity: 0;
+transition: opacity 0.3s ease;
+
+${PhotoWrapper}:hover & {
+  opacity: 1;
+}
+
+`;
+
 export const PhotoGallery = styled.img`
-width: 95%;
+width: 100%;
+
 // TODO: modify padding depending on devices 
 // padding: 8px 0;
-padding: 8px;
-margin: 0 auto;
 
 
-
-&:hover {
-    opacity: 0.4;
-  }
-
-
+${PhotoWrapper}:hover & {
+  opacity: 0.4;
+}
 
 
 // &.zoom {
@@ -96,11 +127,6 @@ margin: 0 auto;
 // &:hover ${ImageText} {
 //   opacity: 1; /* Show text on hover */
 // }`;
-
-export const PhotoTitle = styled.p`
-
-
-`;
 
 
 export const CarouselNavWrapper = styled.div`
