@@ -19,15 +19,15 @@ align-items: center;
 border: 1px solid yellow;
 width: auto;
 margin: 0 auto;
-text-align: justify;
-text-justify: inter-word;
-padding: 40px;
+padding: 30px;
 
 @media ${device.mobileL} {
   width: 700px;
+  padding: 40px;
 }
 @media ${device.tablet} {
   width: 700px;
+  padding: 40px;
 }
 `;
 
@@ -37,8 +37,18 @@ margin: 0 auto;
 `;
 
 export const LeafImg = styled.img`
-width: 60px;
-height: 60px;
+display: none;
+
+@media ${device.mobileL} {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+}
+@media ${device.tablet} {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+}
 `;
 
 export const IntroductionTitle = styled.h2`
@@ -49,22 +59,58 @@ letter-spacing: 3px;
 `;
 
 export const IntroductionText = styled.p`
+// font-size: 15px;
+line-height: 25px;
+text-align: justify;
+
+@media ${device.mobileL} {
+  line-height: 30px;
+  text-align: center;
+}
+@media ${device.tablet} {
+  line-height: 30px;
+  text-align: center;
+}
 `;
 
 export const PhotoWrapper = styled.div`
-width: 95%;
+// width: 95%;
 position: relative;
-padding: 8px;
+padding-left: 4px;
+padding-right: 4px;
+padding-top: 2px;
+padding-bottom: 2px;
 margin: 0 auto;
+
+@media ${device.mobileL} {
+  padding: 8px;
+}
+@media ${device.tablet} {
+  padding: 8px;
+}
 `;
 
 export const PhotoSection = styled.div`
 display: grid;
-grid-template-columns: 1fr 1fr 1fr 1fr;
+grid-template-columns: repeat(2, 1fr);
+
+margin-left: -4px;
+margin-right: -4px;
 
 // OPTIONAL / DIFFERENT LAYOUT:
-width: 90%;
-margin: 0 auto;
+// width: 90%;
+// margin: 0 auto;
+
+@media ${device.mobileL} {
+  grid-template-columns: repeat(4, 1fr); // same as 1fr 1fr 1fr 1fr
+  margin-left: -8px;
+  margin-right: -8px;
+}
+@media ${device.tablet} {
+  grid-template-columns: repeat(4, 1fr); 
+  margin-left: -8px;
+margin-right: -8px;
+}
 `;
 
 export const PhotoTitle = styled.div`
