@@ -1,19 +1,34 @@
 import styled from "styled-components";
+import { device } from "../devices";
 
 export const PrimaryWrapper = styled.div`
-margin-left: 30px;
+margin-left: 0;
 border: 1px solid pink;
+
+@media ${device.mobileL} {
+  margin-left: 30px;
+}
+@media ${device.tablet} {
+  margin-left: 30px;
+}
 `;
 
 export const SecondaryWrapper = styled.div`
 display: flex;
 align-items: center;
 border: 1px solid yellow;
-width: 700px;
+width: auto;
 margin: 0 auto;
 text-align: justify;
 text-justify: inter-word;
 padding: 40px;
+
+@media ${device.mobileL} {
+  width: 700px;
+}
+@media ${device.tablet} {
+  width: 700px;
+}
 `;
 
 export const ThirdWrapper = styled.div`
@@ -41,16 +56,6 @@ width: 95%;
 position: relative;
 padding: 8px;
 margin: 0 auto;
-
-@media (min-width: 768px) {
-  /* Apply styles for screens wider than 768px */
-  max-width: 768px;
-}
-
-@media (min-width: 1024px) {
-  /* Apply styles for screens wider than 1024px */
-  max-width: 1024px;
-}
 `;
 
 export const PhotoSection = styled.div`
@@ -62,12 +67,12 @@ width: 90%;
 margin: 0 auto;
 `;
 
-export const PhotoTitle = styled.p`
+export const PhotoTitle = styled.div`
 position: absolute;
-top: 0;
+top: 50%;
 left: 0;
+transform: translateY(-50%);
 width: 100%;
-height: 100%;
 display: flex;
 justify-content: center;
 align-items: center;
@@ -76,58 +81,24 @@ transition: opacity 0.3s ease;
 
 ${PhotoWrapper}:hover & {
   opacity: 1;
+  cursor: zoom-in;
 }
+`;
 
+export const Title = styled.p`
+border: 4px solid #9F7757;
+padding: 10px;
+background-color: #F6F3E7;
 `;
 
 export const PhotoGallery = styled.img`
 width: 100%;
 
-// TODO: modify padding depending on devices 
-// padding: 8px 0;
-
-
 ${PhotoWrapper}:hover & {
   opacity: 0.4;
+  cursor: zoom-in;
 }
-
-
-// &.zoom {
-//     // border: 100px white solid;
-//     background-color: white;
-//     width: 80%;
-//     // position: relative;
-//     // top: 50%;
-//     // left: 50%;
-//     // transform: translate(-50%, -50%); 
-//     //OR JUST USE SCALE 1.5
-//     transform: scale(1.5);
-//     transition: transform 0.1s ease-in-out;
-
-   
-
-// }
-
-
 `;
-
-// export const ImageText = styled.div`
-// position: absolute;
-//   top: 50%;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-//   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-//   color: white;
-//   padding: 10px;
-//   opacity: 0; /* Hide by default */
-//   transition: opacity 0.3s ease; /* Smooth transition */
-// `;
-
-// export const ImageContainerWithHover = styled(PhotoGallery)`
-// &:hover ${ImageText} {
-//   opacity: 1; /* Show text on hover */
-// }`;
-
 
 export const CarouselNavWrapper = styled.div`
 text-align: center;

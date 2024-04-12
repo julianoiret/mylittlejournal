@@ -1,5 +1,5 @@
 import { FC } from "react"
-import { PhotoGallery, PhotoWrapper, PhotoTitle} from "./style";
+import { PhotoGallery, PhotoWrapper, PhotoTitle, Title} from "./style";
 
 export interface Props {
     id: number,
@@ -7,22 +7,21 @@ export interface Props {
     title: string,
     description: string,
     photoPopup: any,
-    openToggle: any,
+    openToggle: () => void,
 }
 
 const Carousel : FC<Props> = ({id, link, title, description, photoPopup, openToggle}) => {
 
     return (
-<PhotoWrapper onClick={() => {
+    <PhotoWrapper onClick={() => {
             openToggle();
             photoPopup(id);
         }}>
-        <PhotoGallery key={id} src={link} alt={description}>
-        </PhotoGallery>
-
-            <PhotoTitle>{title}</PhotoTitle>
-           
-</PhotoWrapper>
+            <PhotoGallery key={id} src={link} alt={description} />
+            <PhotoTitle>
+                <Title>{title}</Title>
+            </PhotoTitle>
+    </PhotoWrapper>
     )
 };
 

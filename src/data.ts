@@ -2,19 +2,19 @@ export const data = [
     {
         id: 1,
         link: 'https://i.postimg.cc/ydN7vdg2/1.jpg',
-        title: 'Title',
+        title: 'Title dsjsjf',
         description: 'Journaling',
     },
     {
         id: 2,
         link: 'https://i.postimg.cc/DyPBp3Bn/IMG-0041.jpg',
-        title: 'Title',
+        title: 'Title gjdjds',
         description: 'Journaling',
     },
     {
         id: 3,
         link: 'https://i.postimg.cc/Ssmf50kB/5.jpg',
-        title: 'Title',
+        title: 'Title gjfkslsals fdjjsjshfh sksjf',
         description: 'Journaling',
     },
     {

@@ -76,8 +76,8 @@ const openToggle = () => {
           <SecondaryWrapper>
           <LeafImg src={require('../asset/leaf.png')}></LeafImg>
           <ThirdWrapper>
-            <IntroductionTitle>Hi, I'm Julia. I create, I write.</IntroductionTitle>
-            <IntroductionText>French-Australian journaler based in Sydney. Passionate about art, collage and writing, I started my first journal when I was 7. I love creating vintage-vibe themes, in particularly with plants and animals. I find journaling relaxing and think that it's a form of art.</IntroductionText>
+            <IntroductionTitle>Hi, I'm Julia. Welcome to my world of Words and Art 👋</IntroductionTitle>
+            <IntroductionText>Bonjour! I'm a French-Australian journal enthusiast residing in the vibrant city of Sydney. Since the tender age of 7, I've been captivated by the art of journaling, seamlessly blending my passions for art, collage, and writing onto its pages. My journey through journaling has led me to specialize in crafting vintage-inspired themes, often adorned with botanical and wildlife motifs. For me, journaling is not just a pastime but a therapeutic art form, offering moments of tranquility and self-expression amidst life's hustle and bustle.</IntroductionText>
             </ThirdWrapper>
             <LeafImg src={require('../asset/leaf.png')}></LeafImg>
           </SecondaryWrapper>
