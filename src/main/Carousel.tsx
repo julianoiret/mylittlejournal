@@ -6,7 +6,7 @@ export interface Props {
     link: string,
     title: string,
     description: string,
-    photoPopup: any,
+    photoPopup: (id: number) => void;
     openToggle: () => void,
 }
 

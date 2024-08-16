@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/alt-text */
 import { FC, useEffect, useState } from "react"
 import { PrimaryWrapper, SecondaryWrapper, ThirdWrapper, LeafImg, IntroductionTitle, IntroductionText, PhotoSection, CarouselNavWrapper, CarouselBtn, FingerImg } from "./style";
 import Carousel from './Carousel';
@@ -12,7 +11,7 @@ export interface detailsPhoto  {
 }
 
 export interface Props {
-    photoGallery: detailsPhoto[] | any,
+    photoGallery: detailsPhoto[],
 }
 
 const Main: FC<Props> = ({photoGallery}) => {
@@ -21,7 +20,8 @@ const Main: FC<Props> = ({photoGallery}) => {
   const [imagesToDisplay, setImagesToDisplay] = useState(photoGallery);
   const [index, setIndex] = useState(1);
   const [isZoom, setZoom] = useState(false);
-  const [photoToggle, setPhotoToggle] = useState("");
+  const [photoToggle, setPhotoToggle] = useState<detailsPhoto | null>(null);
+
 
   const chunkSize = 8;
 
@@ -32,8 +32,12 @@ const openToggle = () => {
 
   // Find which image has been clicked on 
   const photoPopup = (id: number) => {
-    const findImg = allImages.find((img: any)=> img.id === id);
-    return setPhotoToggle(findImg);
+    const findImg = allImages.find((img)=> img.id === id);
+    if (findImg) {
+      setPhotoToggle(findImg);
+    } else {
+      setPhotoToggle(null); 
+    }
   }
 
    // Slice the data: display only 8 photos per page
