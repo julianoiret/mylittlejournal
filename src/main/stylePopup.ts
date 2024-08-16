@@ -31,12 +31,12 @@ export const Overlay = styled.div`
   `
 
   export const OverlayClose = styled.button`
-   position: absolute;
+    position: absolute;
     top: 10px;
     right: 10px;
     background: #f5f5f5;
-    color: #333; 
-    border: 2px solid #333; 
+    color: #6b4f28; 
+    border: 2px solid #6b4f28; 
     border-radius: 50%; 
     width: 40px;
     height: 40px; 
@@ -50,7 +50,7 @@ export const Overlay = styled.div`
 
   &:hover,
   &:focus {
-    background: #333; 
+    background: #6b4f28; 
     color: #f5f5f5; 
     border-color: #f5f5f5; 
   }

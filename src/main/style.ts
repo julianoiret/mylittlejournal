@@ -86,25 +86,33 @@ export const PhotoSection = styled.div`
 export const PhotoTitle = styled.div`
   position: absolute;
   top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  width: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(90, 60, 30, 0.8); 
+  border-radius: 8px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
+  padding: 10px; 
+  text-align: center;
 
-${PhotoWrapper}:hover & {
-  opacity: 1;
-  cursor: zoom-in;
-}
+  ${PhotoWrapper}:hover & {
+    opacity: 1;
+    transform: translate(-50%, -40%);
+    cursor: zoom-in;
+  }
 `;
 
 export const Title = styled.p`
-  border: 4px solid #9F7757;
-  padding: 10px;
-  background-color: #F6F3E7;
+border: none;
+  color: #F6F3E7; 
+  font-size: 16px; 
+  font-weight: bold; 
+  margin: 0; 
 `;
 
 export const PhotoGallery = styled.img`
