@@ -24,17 +24,17 @@ export const Overlay = styled.div`
   `
 
   export const OverlayClose = styled.button`
-  position: absolute;
-  top: 3px;
-  right: 10px;
-  background: none;
-  outline: 0;
-  color: black;
-  border: 0;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+    position: absolute;
+    top: 3px;
+    right: 10px;
+    background: none;
+    outline: 0;
+    color: black;
+    border: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
   `
   
   export const ProjectImg = styled.img`
-  width: 100%;
+    width: 100%;
   `
