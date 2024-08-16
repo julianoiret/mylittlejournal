@@ -11,11 +11,11 @@ export const SecondaryWrapper = styled.div`
   width: auto;
   padding: 30px;
 
-@media ${device.tablet} {
-  width: 700px;
-  padding: 40px;
-  margin: 0 auto;
-}
+  @media ${device.tablet} {
+    width: 700px;
+    padding: 40px;
+    margin: 0 auto;
+  }
 `;
 
 export const ThirdWrapper = styled.div`
@@ -26,11 +26,11 @@ export const ThirdWrapper = styled.div`
 export const LeafImg = styled.img`
   display: none;
 
-@media ${device.tablet} {
-  display: inline-block;
-  width: 60px;
-  height: 60px;
-}
+  @media ${device.tablet} {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+  }
 `;
 
 export const IntroductionTitle = styled.h2`
@@ -44,10 +44,10 @@ export const IntroductionText = styled.p`
   line-height: 25px;
   text-align: justify;
 
-@media ${device.tablet} {
-  line-height: 30px;
-  text-align: center;
-}
+  @media ${device.tablet} {
+    line-height: 30px;
+    text-align: center;
+  }
 `;
 
 export const PhotoWrapper = styled.div`
@@ -58,9 +58,9 @@ export const PhotoWrapper = styled.div`
   padding-bottom: 2px;
   margin: 0 auto;
 
-@media ${device.tablet} {
-  padding: 8px;
-}
+  @media ${device.tablet} {
+    padding: 8px;
+  }
 `;
 
 export const PhotoSection = styled.div`
@@ -75,7 +75,7 @@ export const PhotoSection = styled.div`
   @media ${device.tablet} {
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
-  }
+    }
 
   & > * {
     margin: 0;
@@ -108,7 +108,7 @@ export const PhotoTitle = styled.div`
 `;
 
 export const Title = styled.p`
-border: none;
+  border: none;
   color: #F6F3E7; 
   font-size: 16px; 
   font-weight: bold; 
@@ -131,12 +131,20 @@ export const CarouselNavWrapper = styled.div`
 
 export const CarouselBtn = styled.button`
   font-size: 60px;
-  padding: 0 100px;
+  padding: 0 50px;
   border: none;
   background-color: transparent;
   cursor: pointer;
+
+  @media ${device.tablet} {
+    padding: 0 80px;
+  }
 `;
 
 export const FingerImg = styled.img`
-  width: 100px;
+  width: 65px;
+
+  @media ${device.tablet} {
+    width: 100px
+  }
 `;

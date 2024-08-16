@@ -18,11 +18,11 @@ export const Banner = styled.div`
 export const TitleImg = styled.img`
   display: none;
 
-@media ${device.tablet} {
-  width: 100px;
-  display: inline-block;
-  padding-left: 30px;
-}
+  @media ${device.tablet} {
+    width: 100px;
+    display: inline-block;
+    padding-left: 30px;
+  }
 `;
 
 export const LeftImg = styled.img`
@@ -34,9 +34,9 @@ export const LeftImg = styled.img`
     padding-left: 20px;
   }
 
-   @media ${device.laptop} {
-     width: 300px;
-     padding-left: 30px;
+  @media ${device.laptop} {
+    width: 300px;
+    padding-left: 30px;
   }
 `;
 
@@ -49,7 +49,7 @@ export const RightImg = styled.img`
     width: 170px;
   }
 
-    @media ${device.laptop} {
+  @media ${device.laptop} {
     width: 270px;
   }
 `;
@@ -61,9 +61,9 @@ export const Title = styled.h1`
   text-align: center;
   margin-bottom: -5px;
 
-@media ${device.tablet} {
-  margin-bottom: 0;
-}
+  @media ${device.tablet} {
+    margin-bottom: 0;
+  }
 `;
 
 export const Name = styled.p`
@@ -71,9 +71,9 @@ export const Name = styled.p`
   font-size: 25px;
   text-align: center;
 
-@media ${device.tablet} {
-  font-size: 30px;
-}
+  @media ${device.tablet} {
+    font-size: 30px;
+  }
 `;
 
 export const TitleWrapper = styled.div`
