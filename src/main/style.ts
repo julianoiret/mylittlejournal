@@ -131,7 +131,7 @@ export const CarouselNavWrapper = styled.div`
 
 export const CarouselBtn = styled.button`
   font-size: 60px;
-  padding: 0 50px;
+  padding: 0 35px;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -142,7 +142,7 @@ export const CarouselBtn = styled.button`
 `;
 
 export const FingerImg = styled.img`
-  width: 65px;
+  width: 75px;
 
   @media ${device.tablet} {
     width: 100px
