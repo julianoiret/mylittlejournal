@@ -277,14 +277,14 @@ export const data = [
     },
     {
         id: 47,
-        link: 'https://i.postimg.cc/L6WrRZrN/7.jpg',
-        title: 'Mushrooms #1',
+        link: 'https://i.postimg.cc/SK2jwWsx/Cropped-Image-3.jpg',
+        title: 'Exploration',
         description: 'Journaling',
     },
     {
         id: 48,
         link: 'https://i.postimg.cc/s2rHDPK9/8.jpg',
-        title: 'Mushrooms #2',
+        title: 'Mushrooms',
         description: 'Journaling',
     },
     {
@@ -301,8 +301,8 @@ export const data = [
     },
     {
         id: 51,
-        link: 'https://i.postimg.cc/hjM1RCGf/6.jpg',
-        title: 'La Poésie',
+        link: 'https://i.postimg.cc/25F7BRQW/Cropped-Image-4.jpg',
+        title: 'Feather',
         description: 'Journaling',
     },
     {
@@ -331,8 +331,8 @@ export const data = [
     },
     {
         id: 56,
-        link: 'https://i.postimg.cc/pVqms0z3/11.jpg',
-        title: 'Curious',
+        link: 'https://i.postimg.cc/wMkCWGYR/Cropped-Image-2.jpg',
+        title: 'Fossils',
         description: 'Journaling',
     },
     {
