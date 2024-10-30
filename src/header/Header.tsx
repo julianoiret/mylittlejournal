@@ -13,7 +13,6 @@ const Header: FC = () => {
             </TitleWrapper>
             <Name>Creative journals - Science | History | Culture | Art</Name>
             </TitleSubtitleWrapper>
-            {/* <MiddleImg src={require('../asset/butterfly-2.png')}></MiddleImg> */}
             <RightImg src={require('../asset/yellow-plant.png')}></RightImg>
         </Banner>
         </>
